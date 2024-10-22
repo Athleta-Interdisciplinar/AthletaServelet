@@ -1,0 +1,346 @@
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- GERAIS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: sticky;
+}
+
+#menuHamb{
+    margin-top: 0px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- CRIAÇÃO -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.criacao{
+    width: 100%;
+    height: 570px;
+    background-image: url(../imagens/basquete.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.criacaoTxt{
+    display: flex;
+    width: 700px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.criacaoTxt > h2{
+    font-size: 65px;
+    font-weight: 400;
+}
+
+.criacaoTxt > p{
+    font-size: 26px;
+    font-weight: 300;
+    width: 85%;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- IDEIA -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.ideia{
+    padding: 0px 40px;
+}
+
+.ideia-title{
+    color: #F9A400;
+    font-size: 50px;
+}
+
+.ideia-title > img{
+    width: 80px;
+    margin-left: 10px;
+}
+
+.ideia-txt{
+    color: #6a6a6a;
+    text-align: justify;
+    font-size: 20px;
+
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=- NOSSA EQUIPE -=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.nossaEquipe-hr{
+    width: 100%;
+    height: 5px;
+    background-color: #F9A400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nossaEquipe-title{
+    font-size: 50px;
+    color: #F9A400;
+    text-align: center;    
+    background-color: #f0f0f0;
+    width: 400px;
+}
+
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- CARROSSEL -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.carousel-outline{
+    display: grid;
+    grid-template-columns: 3fr 15fr 3fr;
+    width: 100%;
+}
+
+.carousel-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 37px;
+}
+
+.carousel-button > button{
+    border: 0px;
+    color: white;
+    background-color: #F9A400;
+    width: 100px;
+    height: 100%;
+    border-radius: 20px;
+    border: 3px solid #e0e0e0;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.carousel-button > button:hover{
+    background-color: white;
+    color: #F9A400;
+}
+
+.carousel-button > button:active{
+    background-color: rgb(196, 196, 196);
+}
+
+.carousel-container {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card {
+    min-width: 100%;
+    box-sizing: border-box;
+    background-color: #e0e0e0;
+    border: 2px solid orange;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border: 3px solid #f9a6006b;
+    background-position: center;
+}
+
+.profile-info {
+    color: #555;
+}
+
+.profile-info h2 {
+    color: orange;
+    margin: 0;
+}
+
+.carousel-navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nav-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.nav-dot.active {
+    background-color: orange;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=- GERMINARE TECH -=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.germinare{
+    padding: 0px 40px;
+}
+
+.germinare-title{
+    color: #F9A400;
+    font-size: 60px;
+}
+
+.germinare-title > img{
+    width: 90px;
+    margin-left: 10px;
+}
+
+.germinare-grid{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 3fr 2fr;
+}
+
+.germinare-txt{
+    color: #6a6a6a;
+    text-align: justify;
+    width: 95%;
+    font-size: 20px;
+}
+
+.germinare-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.germinare-img > img{
+    width: 100%;
+}
+
+.germinare-img-txt{
+    display: none;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- FOOTER -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+footer{
+    background-image: none;
+    border-top: 3px solid #f9a400;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- MEDIA -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+@media screen and (max-width: 1070px){
+    .nav-dot{
+        display: none;
+    }
+
+    .germinare-img{
+        display: none;
+    }
+
+    .germinare-grid{
+        display: flex;
+    }
+
+    .germinare-img-txt{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 60%;
+    }
+
+    .germinare-img-txt > img{
+        margin: 50px 0px;
+        width: 100%;
+    }
+
+    .germinare-txt > br{
+        display: none;
+    }
+
+    .germinare-txt{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .carousel-button > button{
+        width: 40px;
+        height: 28%;
+        border-radius: 15%;
+    }
+
+    .carousel-container{
+        width: 80%;
+    }
+
+    .carousel-card{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .profile-picture{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile-picture > img{
+        width: 150px;
+        height: 150px;
+        margin: 0px;
+    }
+
+    .profile-info{
+        text-align: center;
+    }
+
+    .germinare-title{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .germinare-title > img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .germinare-txt{
+        grid-template-columns: none;
+        grid-template-rows: none;
+    }
+
+    .germinare-img-txt{
+        height: 300px;
+    }
+}
+
+@media screen and (max-height: 450px){
+    .germinare-txt > br{
+        display: block;
+    }
+
+    .germinare-img-txt{
+        margin-top: -20px;
+    }
+
+    .germinare-img-txt > img{
+        width: 50%;
+    }
+}
