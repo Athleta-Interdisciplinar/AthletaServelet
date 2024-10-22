@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Athleta';
+    src: url(../fonte/Harabara\ Mais\ Demo.otf) format(opentype);
+}
+
+content{
+    position: relative;
+    left: 15px;
+}
+
+h1{
+    font-family: 'Athleta';
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+
+p{
+    font-size: 20px;
+    color: #6A6A6A;
+}
+
+.error, a{
+    color: #F9A400;
+}
+
+li{
+    color: #6A6A6A;
+}
+
+ul{
+    position: relative;
+    left: 10px;
+}
+
+.tente{
+    margin-top: 22px;
+    font-size: 18px;
+}

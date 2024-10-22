@@ -1,0 +1,696 @@
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- GERAIS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lexand Deca';
+}
+
+@font-face {
+    font-family: 'Athleta';
+    src: url(../fonte/Harabara\ Mais\ Demo.otf) format(opentype);
+}
+
+@font-face {
+    font-family: 'Lexand Deca';
+    src: url(../fonte/LexendDeca-VariableFont_wght.ttf) format(opentype);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- HEADER -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+header{
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    background-color: #F9A400;
+    color: white;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.tpLogo{
+    height: 60px;
+    margin-left: 10px;
+}
+
+.lg{
+    margin-left: 1%;
+}
+
+.tpConta{
+    display: flex;
+    float: right;
+    height: 40px;
+    width: 100%;
+    background-color: #FFCC68;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 4px white solid;
+    margin-right: 20px;
+}
+
+.tpConta > p{
+    margin-right: 10px;
+}
+
+.tpConta > img{
+    width: 20px;
+    height: 20px;
+}
+
+.tpConta:hover{
+    background-color: #ffc021;
+}
+
+.tpConta:active{
+    background-color: #b99332;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.tpSobrenos, .tpSustentabilidade, .tpSobreAthleta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.tpSobrenos{
+    width: 150px;
+}
+
+.tpSobreAthleta, .tpSustentabilidade{
+    width: 200px;
+}
+
+.tpSobreAthleta:hover, .tpSobrenos:hover, .tpSustentabilidade:hover{
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background-color: white;
+    color: #F9A400;
+}
+
+.tpSobreAthleta:active, .tpSobrenos:active, .tpSustentabilidade:active{
+    background-color: rgb(209, 209, 209);
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=- MENU - HAMBURGUER -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.hamb{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#menuHamb{
+    flex-direction: column;
+    margin-top: 0;
+    background-color: #F9A400;
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    color: white;
+    display: none;
+    z-index: 999;
+}
+
+#menuHamb > a{
+    display: flex;
+    justify-content: center;
+}
+
+.cont{
+    height: 10vh;
+}
+
+.fechado{
+    display: block;
+    width: 20px;
+    margin: 20px;
+}
+
+.hamb-conta{
+    display: flex;
+    height: 10vh;
+    width: 50vw;
+    background-color: #FFCC68;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 4px white solid;
+    padding: 0px 5vw;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.hamb-conta > img{
+    margin-left: 2vh;
+    width: 8vh;
+    height: 8vh;
+}
+
+.hamb-redirect{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 3vh 0vh;
+    padding: 2vh;
+    border-bottom: 2px solid white;
+}
+
+.hamb-redirect > p{
+    width: 100%;
+    font-size: 5vh;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.hamb-redirect > p > img{
+    display: inline-block;
+    width: 5vh;
+}
+
+
+#menuHamb:target{
+    display: flex;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- TÊNIS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.tenis{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 700px;
+    background-image: url(../imagens/tenis2.png);
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tenisTxt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    color: white;
+    font-size: 30px;
+    font-weight: 250;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- POPUP -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.popup{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: #F9A400;
+    border-radius: 20px 0px 0px 20px;
+    width: 65vw;
+    height: 30vh;
+    z-index: 2;
+    float: right;
+    align-items: center;
+    top: -15vh;
+}
+
+.popup-img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-img > img{
+    width: 70%;
+    height: 70%;
+}
+
+.popuptxt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 25px;
+    color: white;
+}
+
+.popuptxt > h2, .popuptxt > p{
+    width: 100%;
+    text-align: left;
+}
+
+.at, at{
+    font-family: 'Athleta';
+}
+
+.linha{
+    background-image: url(../imagens/Group\ 355.png);
+    width: 100%;
+    height: 500px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position: 0px -700px;
+    margin-top: -3%;
+    margin-bottom: -5%;
+    z-index: -1;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- EVENTOS  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.fundo_laranja{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    width: 100%;
+    height: auto;
+    padding: 0px 0px 50px 0px;
+    z-index: -1;
+    background-color: #F9A400;
+    transform: skewY(-4deg);
+    color: white;
+}
+
+.fundo_laranja_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transform: skewY(4deg);
+    margin-top: -30px;
+
+}
+
+.fundo_laranja_img > img{
+    width: 80%;
+}
+
+.eventotxt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: skewY(4deg);
+}
+
+.eventotxt > h2{
+    font-size: 50px;
+}
+
+.eventotxt > p{
+    font-size: 30px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=- ATHLETA STORE -=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.athleta_store{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url(../imagens/Group\ 353.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 100%;
+    height: auto;
+    color: #6C6D6E;
+    background-color: #F4F4F4;
+    transform: skewY(-4deg);
+    z-index: 3;
+}
+
+.athleta_store_txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: skewY(4deg);
+    width: 100%;
+    height: 100%;
+}
+
+.athleta_store_txt > h2{
+    font-size: 50px;
+    font-weight: 450;
+
+}
+
+.athleta_store_txt > img{
+    display: none;
+}
+
+.athleta_store_txt > p{
+    font-size: 30px;
+    width: 80%;
+    text-align: justify;
+}
+
+.athleta_store_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: skewY(4deg);
+}
+
+.athleta_store_img > img{
+    width: 80%;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ESPORTES -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+
+.esportes{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    width: 100%;
+    height: auto;
+    padding: 0px 0px 50px 0px;
+    z-index: -1;
+    background-color: #F9A400;
+    color: white;
+    margin-top: -50px;
+    padding-top: 150px;
+}
+
+.esportes-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: -30px;
+}
+
+.esportes-img > img{
+    width: 80%;
+}
+
+.esportes-txt > h2{
+    font-size: 60px;
+    font-weight: 450;
+}
+
+.esportes-txt > p{  
+    font-size: 30px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- FOOTER -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+footer{
+    width: 100%;
+    height: 400px;
+}
+
+
+.footer-googlePlay{
+    position: relative;
+    float: right;
+    right: 5%;
+    top: 20%;
+}
+
+.footer-spliter{
+    display: grid;
+    grid-row: 1fr 1fr 1fr;
+    height: 30vh;
+}
+
+.footer-redirect{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin: 50px 0px 50px 5%;
+    color: #626161;
+}
+
+.footer-redirect > h2{
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.footer-redirect > a{
+    margin-bottom: 10px;
+}
+
+.footer-links{
+    width: auto;
+    margin-left: 5%;
+}
+
+.footer-links-grid{
+    display: grid;
+    grid-row: 1fr 1fr;
+    width: fit-content;
+}
+
+.footer-links-grid > img{
+    width: 250px;
+}
+
+.footer-contato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.footer-contato > a > img{
+    margin: 0px 12px;
+}
+
+.footer-contato > a > img{
+    width: 30px;
+}
+
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- TARGET -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+#menuHamb:target{
+    display: flex;
+    position: fixed;
+}
+
+#menuHamb:target ~ * {
+    display: none;
+}
+  
+#menuHamb:target ~ header {
+    display: block;
+}
+
+#menuHamb:target {
+    display: block;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- MEDIA -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+@media screen and (max-width: 980px) {
+    .tenis{
+        background-image: url(../imagens/tenis3.jpg);
+        background-position: center;
+    }
+
+    .nav, .tpConta{
+        display: none;
+    }
+
+    .tpConta{
+        display: none;
+    }
+
+    header{
+        border-bottom: 2px solid white;
+    }
+
+    .hamb{
+        display: block;
+    }
+
+    .hamb-redirect > p{
+        font-size: 30px;
+    }
+
+    .tenisTxt{
+        width: 350px;
+    }
+
+
+
+    .popup-img{
+        display: none;
+    }
+
+    .popup{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60vw;
+        height: auto;
+        padding: 10px 30px;
+    }
+
+
+
+    .fundo_laranja{
+        margin-top: -200px;
+        grid-template-columns: none;
+        grid-template-rows: 2fr 3fr;
+    }
+
+    .eventotxt{
+        padding: 30px;
+    }
+
+    .eventotxt > h2{
+        text-align: center;
+    }
+
+    .eventotxt > p{
+        text-align: center;
+    }
+
+
+
+    .athleta_store{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        background-image: none;
+        height: 900px;
+    }
+
+    .athleta_store_txt{
+        margin-top: 100px;
+        height: auto;
+    }
+
+    .athleta_store_txt > img{
+        display: flex;
+        width: 55%;
+    }
+
+    .athleta_store_txt > p{
+        text-align: center;
+    }
+
+    .athleta_store_img{
+        display: none;
+        margin-top: 20px;
+    }
+
+
+
+    .esportes{
+        margin-top: -200px;
+        grid-template-columns: none;
+        grid-template-rows: 2fr 3fr;
+        padding-top: 350px;
+        height: 90vh;
+    }
+
+    .esportes-txt{
+        padding: 30px;
+    }
+
+    .esportes-txt > h2{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .esportes-txt > p{
+        padding: 0px 12px;
+        font-size: 23px;
+        text-align: center;
+    }
+
+    footer{
+        padding: 0px;
+        background-image: none;
+    }
+
+    .footer-googlePlay{
+        display: none;
+    }
+
+    .footer-spliter{
+        padding-bottom: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-redirect{
+        margin-left: 0px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .footer-redirect > h2{
+        font-size: 38px;
+    }
+
+    .footer-links{
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-height: 450px){
+    .tenisTxt{
+        width: 500px;
+    }
+
+    .fundo_laranja{
+        height: 800px;
+    }
+
+    .fundo_laranja_img > img, .esportes-img > img, .athleta_store_img > img{
+        width: 50%;
+    }
+
+    .esportes{
+        height: 170vh;
+    }
+
+    .esportes-txt{
+        margin-top: 30px;
+    }
+
+    .esportes-txt > h2{
+        font-size: 28px;
+    }
+
+    .esportes-txt > p{
+        padding: 0px 50px;
+        font-size: 23px;
+        text-align: justify;
+    }
+
+    .footer-spliter{
+        padding-bottom: 320px;
+    }
+}
