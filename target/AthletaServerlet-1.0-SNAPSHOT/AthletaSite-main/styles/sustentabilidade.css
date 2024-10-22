@@ -1,0 +1,204 @@
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- GERAIS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+*{
+    z-index: 1;
+}
+
+header{
+    position: sticky;
+}
+
+#menuHamb{
+    margin-top: 0px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=- SUSTENTÁVEL -=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.sustentabilidade{
+    display: flex;
+    position: relative;
+    background-image: url(../imagens/sustentavel2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 580px;
+    top: -1px;
+}
+
+.sustentabilidadeTxt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    color: white;
+}
+
+.sustentabilidadeTxt > h2{
+    font-size: 60px;
+}
+
+.sustentabilidadeTxt > p{
+    font-size: 25px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=- ODS -=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.ods{
+    position: relative;
+    width: 95%;
+}
+
+.ods > h2{
+    color: #F9A400;
+    font-size: 40px;
+    font-weight: 400;
+    width: auto;
+    text-align: center;
+}
+
+.ods-img > img{
+    float: right;
+    margin-top: 50px;
+    width: 360px;
+}
+
+.ods > p, .odsTxt{
+    color: #6a6a6a;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.odsTxt{
+    width: 63%;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=- GRID - ODS -=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.ods_fixo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.todas_ODS{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.todas_ODS > img{
+    width: 100px;
+    height: 100px;
+}
+
+.ods_img {
+    transition: transform 0.3s ease;
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+
+.ods_img:hover {
+    transform: scale(1.3);
+    z-index: 100;
+}
+
+
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- FOOTER -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+footer{
+    margin-top: 80px;
+    border-top: 4px solid #F9A400;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- MEDIA -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+@media screen and (max-width: 1200px){
+    .sustentabilidade{
+        background-image: url(../imagens/sustental_cll.jpg);
+    }
+
+    .sustentabilidadeTxt{
+        width: 350px;
+    }
+    
+    .sustentabilidadeTxt > h2{
+        font-size: 40px;
+    }
+    
+    .sustentabilidadeTxt > p{
+        font-size: 20px;
+    }
+
+
+
+    .ods{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .ods > h2{
+        font-size: 35px;
+    }
+
+    .ods > p{
+        width: 90%;
+    }
+
+    .ods-img{
+        display: flex;
+        justify-content: center;
+    }
+
+    .odsTxt{
+        width: 90%;
+        text-align: justify;
+    }
+
+    .odsTxt > p{
+        width: 100%;
+    }
+
+    .ods-img > img{
+        float: none;
+        width: 70%;
+    }
+
+    .todas_ODS {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .ods > p, .odsTxt > p{
+        font-size: medium;
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=- MEDIA - ODS -=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+@media screen and (max-width: 800px) {
+    .todas_ODS {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .todas_ODSr {
+        grid-template-columns: 1fr; 
+    }
+}
