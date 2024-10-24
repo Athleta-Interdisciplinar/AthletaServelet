@@ -11,6 +11,13 @@ public class AnaliseEventos {
     int id_usuario;
     int id_local;
 
+    public AnaliseEventos(String nome, String descricao, Date dt_evento, String organizador) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.dt_evento = dt_evento;
+        this.organizador = organizador;
+    }
+
     public AnaliseEventos(int id, String nome, String descricao, Date dt_evento, String organizador, int id_usuario, int id_local) {
         this.id = id;
         this.nome = nome;
@@ -48,6 +55,23 @@ public class AnaliseEventos {
 //    public int getId_local() {
 //        return id_local;
 //    }
+
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setDt_evento(Date dt_evento) {
+        this.dt_evento = dt_evento;
+    }
+
+    public void setOrganizador(String organizador) {
+        this.organizador = organizador;
+    }
 
     public String toString() {
         return "id: " + id +

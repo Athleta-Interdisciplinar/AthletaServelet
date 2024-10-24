@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="AthletaSite-main/styles/style.css">
@@ -19,7 +20,7 @@
         <a href="admin.jsp">
             <div class="tpConta">
             <p>Voltar</p>
-            <img src="AthletaSite-main/imagens/seta.png" alt="">
+            <img src="AthletaSite-main/imagens/seta.png" alt="">x
             </div>
         </a>
     </header>
@@ -29,19 +30,19 @@
     <div class="aprEventos" id="aprEventos">
         <div class="aprEventos-txt">
             <div class="aprEventos-blocos">
-                <p>Nome do Evento: <spa></spa></p>
+                <p>Nome do Evento: <spa>${nome}</spa></p>
             </div>
             <div class="aprEventos-blocos">
-                <p>Descrição: <spa></spa></p>
+                <p>Descrição: <spa>${descricao}</spa></p>
             </div>
             <div class="aprEventos-blocos">
-                <p>Local: <spa></spa></p>
+                <p>Local: <spa>${local}</spa></p>
             </div>
             <div class="aprEventos-blocos">
-                <p>Organizador: <spa></spa></p>
+                <p>Organizador: <spa>${organizador}</spa></p>
             </div>
             <div class="aprEventos-blocos">
-                <p>Data do Evento: <spa></spa></p>
+                <p>Data do Evento: <spa>${data}</spa></p>
             </div>
         </div>
 

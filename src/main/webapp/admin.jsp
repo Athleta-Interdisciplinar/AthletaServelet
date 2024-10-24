@@ -35,7 +35,7 @@
             <div class="" id="addForum-btn">Adicionar Fórum</div>
         </a>
         <br>
-        <a href="aprEventos.html" class="aprEventos-btn">
+        <a href="aprEventos.jsp" class="aprEventos-btn">
             <div class="aprEventos-btn" id="aprEventos-btn">Aprovar Eventos</div>
         </a>
         <br>
